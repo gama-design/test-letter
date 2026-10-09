@@ -1,0 +1,125 @@
+:root {
+    --krem-terang: #FFE8E8;
+    --marun-teks: #580000;
+    --emas: #A98755;
+    --tombol: #850000;
+    --marun-tua: #3b0000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #f4f4f4;
+    color: var(--marun-teks);
+}
+
+/* Layout Mobile-First max 480px */
+.main-container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: var(--krem-terang);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Typography */
+.font-parisienne { font-family: 'Parisienne', cursive; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.title-gold { color: var(--emas); }
+
+/* Cover Overlay Fullscreen */
+.cover-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--krem-terang);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Sections Global */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+.bg-krem { background-color: var(--krem-terang); }
+.bg-marun-tua { background-color: var(--marun-tua); }
+
+/* Card Styles */
+.card-arch-krem {
+    background-color: var(--krem-terang);
+    border-radius: 120px 120px 20px 20px;
+    padding: 40px 20px;
+}
+
+.card-mempelai {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.bank-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.arch-frame {
+    border-radius: 50% 50% 0 0;
+    border: 2px solid var(--marun-teks);
+    overflow: hidden;
+    width: 200px;
+    height: 250px;
+    margin: 0 auto;
+}
+.img-mempelai { width: 100%; height: 100%; object-fit: cover; }
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--tombol);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.music-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--tombol);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Countdown Grid */
+.countdown-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Forms & Input */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
