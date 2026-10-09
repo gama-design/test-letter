@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Tegar & Rina</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Parisienne&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <!-- Audio Element -->
+    <audio id="bg-music" loop>
+        <source src="assets/music.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Tombol Musik Fixed -->
+    <button id="music-btn" class="music-toggle" onclick="toggleMusic()">🎵</button>
+
+    <div class="main-container">
+
+        <!-- Cover Overlay (Buka Undangan) -->
+        <section id="cover" class="cover-overlay">
+            <div class="cover-content">
+                <p class="subtitle">WEDDING INVITATION</p>
+                <h1 class="font-parisienne">Tegar & Rina</h1>
+                <p class="date">31.03.2030</p>
+                <div class="guest-box">
+                    <p>Dear:</p>
+                    <h3 id="guest-name">Tamu Undangan</h3>
+                </div>
+                <button class="btn-primary" onclick="openInvitation()">OPEN INVITATION</button>
+            </div>
+        </section>
+
+        <!-- Section 1: Hero -->
+        <section class="section hero">
+            <p class="subtitle">THE WEDDING OF</p>
+            <h1 class="font-playfair title-gold">TEGAR</h1>
+            <p class="ampersand">&</p>
+            <h1 class="font-playfair title-gold">RINA</h1>
+            <p class="date-text">31. 00. 2030</p>
+        </section>
+
+        <!-- Section 2: Quotes -->
+        <section class="section bg-krem">
+            <h2 class="font-parisienne">Two souls, One heart</h2>
+            <blockquote class="italic-text">
+                "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri..."
+            </blockquote>
+            <p class="quote-source">(QS. Ar-Rum (30): 21)</p>
+        </section>
+
+        <!-- Section 3: Pembuka -->
+        <section class="section bg-krem text-center">
+            <p class="bismillah">Bismillahirrahmanirrahim</p>
+            <p>Assalamualaikum Warahmatullahi Wabarakatuh</p>
+            <p class="desc">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara resepsi pernikahan kami:</p>
+        </section>
+
+        <!-- Section 4: Mempelai Wanita -->
+        <section class="section bg-krem">
+            <div class="card-mempelai">
+                <div class="arch-frame">
+                    <img src="assets/bride.jpg" alt="Mempelai Wanita" class="img-mempelai">
+                </div>
+                <h2 class="font-parisienne title-gold">Rina</h2>
+                <h3 class="font-playfair">Martisa Rina Rahayu</h3>
+                <p>Putri Pertama dari<br>Bapak Slamet Wiyono & Ibu Sriyanti</p>
+                <a href="https://www.instagram.com/arina.raa" target="_blank" class="ig-link">Instagram</a>
+            </div>
+        </section>
+
+        <!-- Section 5: Mempelai Pria -->
+        <section class="section bg-krem">
+            <div class="card-mempelai">
+                <span class="ampersand-big">&</span>
+                <div class="arch-frame">
+                    <img src="assets/groom.jpg" alt="Mempelai Pria" class="img-mempelai">
+                </div>
+                <h2 class="font-parisienne title-gold">Tegar</h2>
+                <h3 class="font-playfair">Muhammad Tegar Islami</h3>
+                <p>Putra Ketiga dari<br>Bapak Eko Agus Setiawan & Ibu Nur Indah Sari</p>
+                <a href="https://www.instagram.com/tetap.tegar" target="_blank" class="ig-link">Instagram</a>
+            </div>
+        </section>
+
+        <!-- Section 6: Countdown -->
+        <section class="section bg-krem text-center">
+            <p class="subtitle">COUNTING</p>
+            <h2 class="font-parisienne">The Days</h2>
+            <div class="countdown-grid">
+                <div><span id="days">0</span><br><small>Hari</small></div>
+                <div><span id="hours">0</span><br><small>Jam</small></div>
+                <div><span id="minutes">0</span><br><small>Menit</small></div>
+                <div><span id="seconds">0</span><br><small>Detik</small></div>
+            </div>
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Nadiya+and+Rizal&dates=20261011T100000/20261011T130000" target="_blank" class="btn-primary">SAVE THE DATE</a>
+        </section>
+
+        <!-- Section 7: Akad Nikah -->
+        <section class="section bg-marun-tua">
+            <div class="card-arch-krem">
+                <h2 class="font-parisienne">Akad Nikah</h2>
+                <p>InsyaAllah akan dilaksanakan pada</p>
+                <h3>MINGGU, 31 MARET 2030</h3>
+                <p>Pukul 08.00 WIB</p>
+                <p>Bertempat di:<br><b>Kediaman Mempelai Wanita</b><br>Dsn. Tuksongo, Ds. Krandon Lor, Kec. Suruh</p>
+                <a href="https://maps.app.goo.gl/tGLFd7uXfqtAoBhw5" target="_blank" class="btn-primary">GOOGLE MAPS</a>
+            </div>
+        </section>
+
+        <!-- Section 8: Resepsi -->
+        <section class="section bg-marun-tua">
+            <div class="card-arch-krem">
+                <h2 class="font-parisienne">Resepsi</h2>
+                <p>InsyaAllah akan dilaksanakan pada</p>
+                <h3>MINGGU, 31 MARET 2030</h3>
+                <p>Pukul 10.00 WIB</p>
+                <p>Bertempat di:<br><b>Kediaman Mempelai Wanita</b><br>Dsn. Tuksongo, Ds. Krandon Lor, Kec. Suruh</p>
+                <a href="https://maps.app.goo.gl/tGLFd7uXfqtAoBhw5" target="_blank" class="btn-primary">GOOGLE MAPS</a>
+            </div>
+        </section>
+
+        <!-- Section 11: Wedding Gift -->
+        <section class="section bg-krem text-center">
+            <h2 class="font-playfair">WEDDING GIFT</h2>
+            <p>Doa restu Anda merupakan karunia yang sangat berarti bagi kami.</p>
+            
+            <div class="bank-card">
+                <p>Bank MANDIRI</p>
+                <p class="rekening" id="rek-mandiri">000</p>
+                <p>a.n. MARTISA RINA RAHAYU</p>
+                <button onclick="copyToClipboard('000', this)" class="btn-primary">Copy</button>
+            </div>
+
+            <div class="bank-card">
+                <p>Bank BCA</p>
+                <p class="rekening" id="rek-bsi">000</p>
+                <p>a.n. MUHAMMAD TEGAR ISLAMI</p>
+                <button onclick="copyToClipboard('000', this)" class="btn-primary">Copy</button>
+            </div>
+        </section>
+
+        <!-- Section 12: RSVP -->
+        <section class="section bg-krem">
+            <div class="card-white">
+                <h2 class="font-playfair">RSVP</h2>
+                <form id="rsvpForm" onsubmit="submitRSVP(event)">
+                    <label>Nama*</label>
+                    <input type="text" id="rsvp-nama" required class="input-field">
+                    
+                    <label>Kehadiran</label>
+                    <div>
+                        <input type="radio" name="hadir" value="Hadir" checked> Hadir
+                        <input type="radio" name="hadir" value="Tidak Hadir"> Tidak Hadir
+                    </div>
+
+                    <label>Jumlah Kehadiran*</label>
+                    <select id="rsvp-jumlah" class="input-field" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <button type="submit" class="btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section 14: Best Wishes -->
+        <section class="section bg-marun-tua">
+            <div class="card-arch-krem">
+                <h2 class="font-playfair">BEST WISHES</h2>
+                <form id="wishesForm" onsubmit="submitWish(event)">
+                    <input type="text" id="wish-nama" placeholder="Nama" required class="input-field">
+                    <textarea id="wish-ucapan" placeholder="Ucapan" required class="input-field"></textarea>
+                    <button type="submit" class="btn-primary">KIRIM</button>
+                </form>
+
+                <h3 id="wishes-count">0 Wishes</h3>
+                <div id="wishes-container" class="wishes-list"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
