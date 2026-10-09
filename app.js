@@ -1,5 +1,4 @@
-// 1. Tempelkan URL Apps Script kamu di dalam tanda kutip di bawah ini
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxZWaipmMEUDncyBLGATlLF5BzmtTepe5HSw4WkfP0Qm0pI2UPKvcATWe2cR8BJfAnX/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw6yr35AnZJ_m2gK-nlLkRrVjrcG1gmHZpYsJcu6bdG3HgHbM03cCft3all1ZyqS8tu/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
     // Read Guest Name from URL (?to=NamaTamu)
@@ -44,7 +43,7 @@ function toggleMusic() {
 
 // Fitur Countdown Ke 11 Okt 2026 10:00:00
 function initCountdown() {
-    const targetDate = new Date('2026-10-11T10:00:00+07:00').getTime();
+    const targetDate = new Date('2030-03-31T10:00:00+07:00').getTime();
 
     setInterval(() => {
         const now = new Date().getTime();
